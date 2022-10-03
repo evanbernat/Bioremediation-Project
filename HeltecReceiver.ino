@@ -12,7 +12,7 @@
 
 */
 #include "heltec.h"
-#include "images.h"
+//#include "images.h"
 
 #define BAND    915E6  //you can set band here directly,e.g. 868E6,915E6
 
@@ -24,11 +24,11 @@ String rssi = "RSSI --";
 String packSize = "--";
 String packet ;
 
-void logo() {
-  Heltec.display->clear();
-  Heltec.display->drawXbm(0, 5, logo_width, logo_height, logo_bits);
-  Heltec.display->display();
-}
+//void logo() {
+ // Heltec.display->clear();
+  //Heltec.display->drawXbm(0, 5, logo_width, logo_height, logo_bits);
+  //Heltec.display->display();
+//}
 
 void LoRaData() {
   Heltec.display->clear();
@@ -61,7 +61,7 @@ void setup() {
   Heltec.display->init();
   Heltec.display->flipScreenVertically();
   Heltec.display->setFont(ArialMT_Plain_10);
-  logo();
+  //logo();
   delay(1500);
   Heltec.display->clear();
 
@@ -110,7 +110,6 @@ int moveActuator(int currentPosition){
     Heltec.display->setFont(ArialMT_Plain_10);
 
     Heltec.display->drawString(0, 0, "Retracting Actuator...");
-    Heltec.display->display();
     delay(1000);
 
     digitalWrite(IN1_PIN, HIGH);
