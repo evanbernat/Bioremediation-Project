@@ -1,5 +1,5 @@
 #include "heltec.h"
-#include "images.h"
+//#include "images.h"
 
 #define BAND   915E6
 
@@ -16,12 +16,12 @@ String packet ;
 
 
 /////////////////////////////////////////////////////////////
-void logo()
-{
-  Heltec.display->clear();
-  Heltec.display->drawXbm(0, 5, logo_width, logo_height, logo_bits);
-  Heltec.display->display();
-}
+//void logo()
+//{
+  //Heltec.display->clear();
+  //Heltec.display->drawXbm(0, 5, logo_width, logo_height, logo_bits);
+  //Heltec.display->display();
+//}
 /////////////////////////////////////////////////////////////
 
 
@@ -36,7 +36,7 @@ void setup() {
   Heltec.display->init();
   Heltec.display->flipScreenVertically();
   Heltec.display->setFont(ArialMT_Plain_10);
-  logo();
+  //logo();
   delay(1500);
   Heltec.display->clear();
 
@@ -148,4 +148,3 @@ int readHCSR04() {
   delay(2000);
   return average;
 }
-///////////////////////////////////////////////////////////
